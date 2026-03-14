@@ -19,6 +19,12 @@ public class Calculator {
                     case "-":
                         result -= accumulatedNums.get(i);
                         break;
+                    case "*":
+                        result *= accumulatedNums.get(i);
+                        break;
+                    case "/":
+                        result /= accumulatedNums.get(i);
+                        break;
                     default:
                         System.out.println("Invalid operator: " + operator);
                 }
