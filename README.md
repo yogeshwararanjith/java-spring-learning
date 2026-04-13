@@ -4,7 +4,7 @@ Learning backend development with Java and Spring Boot - from fundamentals to pr
 
 ## Roadmap
 
-### Phase 1: Java Fundamentals ✅ (In Progress)
+### Phase 1: Java Fundamentals
 - [ ] Core Java concepts
 - [ ] OOP principles
 - [ ] Collections & Streams
