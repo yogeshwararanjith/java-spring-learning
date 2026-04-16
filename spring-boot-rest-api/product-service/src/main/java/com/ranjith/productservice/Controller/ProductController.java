@@ -35,8 +35,9 @@ public class ProductController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Product> getProductById(@PathVariable int id){
-        return productService.findById(id).map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());
+    public Product getProductById(@PathVariable int id){
+        // return productService.findById(id).map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());
+        return productService.findById(id);
     }
 
     @PostMapping
@@ -46,14 +47,15 @@ public class ProductController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Product> updateProduct(@PathVariable int id, @Valid @RequestBody Product product){
-        return productService.updateProduct(id, product).map(ResponseEntity::ok).
-        orElse(ResponseEntity.notFound().build());
+    public Product updateProduct(@PathVariable int id, @Valid @RequestBody Product product){
+        // return productService.updateProduct(id, product).map(ResponseEntity::ok).
+        // orElse(ResponseEntity.notFound().build());
+        return productService.updateProduct(id, product);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Product> deleteProduct(@PathVariable int id){
-        return productService.deleteProduct(id).map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());
+    public Product deleteProduct(@PathVariable int id){
+        return productService.deleteProduct(id);
     }
 
 }
